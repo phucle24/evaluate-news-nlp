@@ -1,0 +1,22 @@
+form {
+    border: 1px solid #545454;
+    border-radius: 5px;
+    padding: 40px;
+}
+
+input {
+    padding: 5px 20px;
+    width: 100%;
+    line-height: 16px;
+    margin: 10px 0;
+}
+input[type=submit]{
+        padding: 0.5em 10em;
+        font-weight: 700;
+        border: none;
+        box-shadow: 5px 5px 5px #10570a;
+        background: rgb(16,87,10);
+        background: linear-gradient(90deg, rgba(16,87,10,1) 23%, rgba(112,237,97,1) 64%, rgba(97,237,205,1) 95%);
+        border-radius: 5px;
+}
+

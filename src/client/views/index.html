@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Test</title>
+      
+    </head>
+
+    <body>
+
+        <header>
+            <div class="">
+                Logo
+            </div>
+            <div class="">
+                navigation
+            </div>
+        </header>
+
+        <main>
+            <section>
+                <form class="form__submit" onsubmit="return Client.handleSubmit(event)">
+                    <input id="url" type="text" name="input" value="" placeholder="URL">
+                    <input type="submit" name="" value="submit">
+                </form>
+            </section>
+
+            <section>
+                <strong>Form Results:</strong>
+                <div id="results">
+                    <div id="agreement"></div>
+                    <div id="confidence"></div>
+                    <div id="irony"></div>
+                    <div id="model"></div>
+                    <div id="score_tag"></div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>This is a footer</p>
+        </footer>
+        <script>
+            // Check that service workers are supported
+            if ("serviceWorker" in navigator) {
+            // Register a service worker hosted at the root of the
+            // site using the default scope.
+            navigator.serviceWorker.register("/service-worker.js").then(
+                (registration) => {
+                console.log("Service worker registration succeeded:", registration);
+                },
+                (error) => {
+                console.error(`Service worker registration failed: ${error}`);
+                },
+            );
+            } else {
+            console.error("Service workers are not supported.");
+            }
+        </script>
+    </body>
+</html>
